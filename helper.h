@@ -46,6 +46,13 @@ int compareChars(const void *a, const void *b) {
     return *(const char *)a - *(const char *)b;
 }
 
+// Comparison function to sort intervals by their start points
+int compareIntervals(const void *a, const void *b) {
+    int *intervalA = *(int **)a; 
+    int *intervalB = *(int **)b;
+    return intervalA[0] - intervalB[0]; 
+}
+
 // compute the Average of an array
 double average(int* nums, int numsSize) {
   double avg = 0;

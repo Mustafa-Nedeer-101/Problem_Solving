@@ -117,6 +117,7 @@ void freeHashTable(HashTable* hashTable) {
     free(hashTable);
 }
 
+
 void printHashTable(HashTable* hashTable) {
     for(int i = 0; i< hashTable->size; i++) {
         HashTableEntry* entry = hashTable->table[i];
