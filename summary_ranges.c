@@ -4,9 +4,6 @@
 #include <math.h>
 #include <string.h>
 
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
 char** summaryRanges(int* nums, int numsSize, int* returnSize) {
     char** result = malloc(sizeof(char*) * 20);
     int resultSize = 0;
@@ -18,7 +15,7 @@ char** summaryRanges(int* nums, int numsSize, int* returnSize) {
         // Start of the run
         int start = nums[index];
 
-        while (index < numsSize && nums[index] + 1 == nums[index + 1])
+        while (index < numsSize - 1 && nums[index] + 1 == nums[index + 1])
         {
             index++;
         }

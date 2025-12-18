@@ -7,7 +7,7 @@
 
 
 int** cons(int* a, int* b) {
-    int **r = malloc(2 * sizeof(int *));
+    int **r = (void*) malloc(2 * sizeof(int *));
     r[0] = a;
     r[1] = b;
     return r;
